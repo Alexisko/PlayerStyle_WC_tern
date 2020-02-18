@@ -11,7 +11,7 @@ ___
 Inspired by [FC_rStats](https://github.com/FCrSTATS) and his amazing work.  
 And made possible thanks to [StatsBomb](https://github.com/statsbomb/open-data) generosity in sharing its data.  
 
-The presentation is avalialable here: [Google slides](https://docs.google.com/presentation/d/e/2PACX-1vRe3J6J9wewgvoYd0at1jsUWRf2IguAeSVOccOewD-iGaQu6k8CzMa_OZmHUcRqjyrz9dvCWHayHaNq/pub?start=false&loop=false&delayms=60000). You can also see the slides below.  
+The presentation is avalialable here (French): [Google slides](https://docs.google.com/presentation/d/e/2PACX-1vRe3J6J9wewgvoYd0at1jsUWRf2IguAeSVOccOewD-iGaQu6k8CzMa_OZmHUcRqjyrz9dvCWHayHaNq/pub?start=false&loop=false&delayms=60000). You can also see the slides below.  
 
 ___
 

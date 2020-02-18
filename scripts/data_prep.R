@@ -15,7 +15,7 @@ wc_data <- wc_data %>% allclean()
 events <- wc_data %>% select(player.name, type.name, location.x, location.y) %>%
   filter(type.name %in% c("Pass", "Shot", "Dribble"))
 
-#we need to keep th event dataframe for heatmap and create a summary
+#we need to keep the event dataframe for heatmap and create a summary for tern plots
 events_sum <- events %>% group_by(player.name) %>%
   mutate(number = n()) %>%
   filter(number >= 40) %>%

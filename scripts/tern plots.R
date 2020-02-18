@@ -2,10 +2,11 @@ library(tidyverse)
 
 library(ggtern)
 
-#ternary plots
+#read data
 profile <- read_csv(here::here("data/events_sum.csv"))
 profile$cluster <- as.factor(profile$cluster)
 
+#plot all clusters
 all_clusters <- ggtern(data = profile, aes(x = prop.Pass, y = prop.Shot, z = prop.Dribble,
                                            fill = cluster)) +
   geom_point(size = 2,
@@ -21,6 +22,7 @@ all_clusters <- ggtern(data = profile, aes(x = prop.Pass, y = prop.Shot, z = pro
 
 all_clusters
 
+#define function for making the cluster plots
 plot_cluster <- function(data, cluster_nb) {
   
   data <- data %>% mutate(highlight = ifelse(cluster == cluster_nb, TRUE, FALSE))
@@ -43,11 +45,12 @@ plot_cluster <- function(data, cluster_nb) {
   return(plot)
 }
 
+#create the plot
 plots_tern <- 1:6 %>%
   map(~plot_cluster(profile, .x))
 
 
-
+#save the plots
 for (i in 1:length(plots_tern)) {
   ggsave(plots_tern[[i]], file = paste0(here::here("plots/tern/cluster_"), i, ".png"),
          width = 7)
@@ -57,7 +60,7 @@ ggsave(all_clusters, file = here::here("plots/tern/cluster_all.png"),
        width = 7)
 
 
-#info for ppt
+#info for slides
 profile %>% select(prop.Pass,
                    prop.Shot,
                    prop.Dribble) %>%
